@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8BBD0"
+    tools:context=".syllabus"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:text="SYLLABUS"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:id="@+id/name"/>
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="50dp"
+            android:background="#F8BBD0"
+            app:src="@drawable/s1"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@drawable/s1"
+            />
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="#F8BBD0"
+            app:src="@drawable/s2"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@drawable/s2"
+            />
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="#F8BBD0"
+            app:src="@drawable/s3"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@drawable/s3" />
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="#F8BBD0"
+            app:src="@drawable/s4"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@drawable/s4"
+            />
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="#F8BBD0"
+            app:src="@drawable/s5"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@drawable/s5"
+            />
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="#F8BBD0"
+            app:src="@drawable/s6"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@drawable/s6"
+            />
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="#F8BBD0"
+            app:src="@drawable/s7"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="@drawable/s7"
+            />
+
+
+        </LinearLayout>
+    </ScrollView>

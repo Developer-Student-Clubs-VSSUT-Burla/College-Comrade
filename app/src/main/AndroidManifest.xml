@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tt">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="VSSUT CSE"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".eec"></activity>
+        <activity android:name=".oop" />
+        <activity android:name=".dsa" />
+        <activity android:name=".math" />
+        <activity android:name=".Lecturenotes" />
+        <activity android:name=".timetable" />
+        <activity android:name=".syllabus" />
+        <activity android:name=".holiday" />
+        <activity android:name=".faculty" />
+        <activity android:name=".PROFILE" />
+        <activity android:name=".contact" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

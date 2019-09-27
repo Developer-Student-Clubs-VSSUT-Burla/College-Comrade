@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8BBD0"
+    tools:context=".contact">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/cs"
+            android:layout_margin="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:text="VSSUT CSE APP \n Version: 1.1"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            android:textColor="#F00000" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textSize="32sp"
+            android:id="@+id/a"
+            android:layout_below="@id/cs"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a"
+            android:id="@+id/about"
+            android:layout_margin="32dp"
+            android:text="This app contains all information about the computer science and engineering department for second year of VSSUT, Burla.\n\nThe information like Time-Table, Syllabus, Lecture Notes, etc enables user to access all the requirements of a student in department. The information here guides you in the academic areas in healthy manner. This is really a handy app"/>
+        <TextView
+            android:id="@+id/dev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:layout_marginTop="100dp"
+            android:text="Develpoed by-"
+            android:textAlignment="center"
+            android:layout_below="@id/about"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/rittik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rittik Biswal:  \n8895350695     "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/dev"
+            android:textSize="20sp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="50dp"
+            />
+        <TextView
+            android:id="@+id/aitik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Aitik Dandapat:\n   6206014527"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/dev"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="50dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rittik"
+            android:layout_centerHorizontal="true"
+            android:text="We value your feedback"
+            android:textSize="25sp"
+            android:layout_marginTop="100dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
