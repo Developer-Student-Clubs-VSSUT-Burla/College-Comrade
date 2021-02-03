@@ -1,5 +1,5 @@
 # College Comrade
-A student portal application for university students . Your Personal College Assistant, It'll never let you miss class, another assignment deadline or any upcoming test.
+A student portal application for university students . 
 
 - It enables user to upload timetable(image or document) which will be converted into Attendance Manager. 
 
