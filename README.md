@@ -12,12 +12,12 @@ A student portal application for university students .
 
 Future prospects include adding a document scanner , image modifier (format conversion and size modification ), smart notifications , etc.
 
-#Installation :
+# Installation :
 
 - Directly from android studio or through APKs
 
-#Tech Stack
+# Tech Stack
 
--Java 
--Android
--Firebase
+- Java 
+- Android
+- Firebase
