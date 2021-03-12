@@ -33,3 +33,7 @@ Future prospects include adding a document scanner , image modifier (format conv
 ## Note
 - Issues will be assigned on a first come, first serve basis. You just have to comment on the issue, asking to be assigned( Optional: Explain briefly about your implentation) .
 - It will be highly appreciated if you add screenshot/video of the changes while making PR.
+
+# Discussion
+
+Hola! Introduce yourself in discussion section. Share your ideas and views. 
