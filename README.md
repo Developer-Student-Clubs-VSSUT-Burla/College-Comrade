@@ -22,7 +22,7 @@ Future prospects include adding a document scanner , image modifier (format conv
 - Android
 - Firebase
 
-# Contibuting Guidelines
+# Contributing Guidelines
 - Make sure you do not copy codes from external sources because that work will not be considered.-
 - Plagiarism is strictly not allowed.
 - You can only work on issues that you have been assigned to you.
