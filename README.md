@@ -27,4 +27,9 @@ Future prospects include adding a document scanner , image modifier (format conv
 - Plagiarism is strictly not allowed.
 - You can only work on issues that you have been assigned to you.
 - If you want to contribute, we prefer that you create an issue before making a PR and link your PR to that issue.
-- If you have modified/added code work, make sure that the app is running successfully before submitting
+- If you have modified/added code work, make sure that the app is running successfully before submitting PR.
+- Do not update [README.md](https://github.com/Developer-Student-Clubs-VSSUT-Burla/College-Comrade/blob/master/README.md)
+
+## Note
+- Issues will be assigned on a first come, first serve basis. You just have to comment on the issue, asking to be assigned( Optional: Explain briefly about your implentation) .
+- It will be highly appreciated if you add screenshot/video of the changes while making PR.
