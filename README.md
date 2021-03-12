@@ -21,3 +21,10 @@ Future prospects include adding a document scanner , image modifier (format conv
 - Java 
 - Android
 - Firebase
+
+# Contibuting Guidelines
+- Make sure you do not copy codes from external sources because that work will not be considered.-
+- Plagiarism is strictly not allowed.
+- You can only work on issues that you have been assigned to you.
+- If you want to contribute, we prefer that you create an issue before making a PR and link your PR to that issue.
+- If you have modified/added code work, make sure that the app is running successfully before submitting
