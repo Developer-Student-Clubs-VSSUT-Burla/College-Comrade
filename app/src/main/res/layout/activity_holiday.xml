@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     tools:context=".holiday"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8BBD0"
-    >
+    android:background="#F8BBD0">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Holidays"
-            android:layout_centerHorizontal="true"
-            android:textAlignment="center"
+            android:text="@string/holidays"
+        android:textAlignment="center"
             android:textSize="32sp"
             android:textColor="#000"
             android:layout_gravity="center"
@@ -33,11 +30,10 @@
         <!--app:src="@drawable/hl"-->
         <!--android:layout_marginTop="500dp"-->
         <!--/>-->
-<com.github.barteksc.pdfviewer.PDFView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/p1"
-    ></com.github.barteksc.pdfviewer.PDFView>
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/p1" />
 
 
 </LinearLayout>

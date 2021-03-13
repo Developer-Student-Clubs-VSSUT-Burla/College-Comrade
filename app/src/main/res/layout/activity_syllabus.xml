@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="30sp"
-            android:text="SYLLABUS"
+            android:text="@string/syllabus"
             android:textColor="#000"
             android:layout_marginTop="20dp"
             android:id="@+id/name"/>

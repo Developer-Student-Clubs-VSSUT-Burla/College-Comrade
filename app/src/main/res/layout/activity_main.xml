@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +8,7 @@
     <LinearLayout
         android:layout_margin="32dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
@@ -17,56 +16,61 @@
             android:textColor="#000"
             android:textSize="30sp"
             android:textAlignment="center"
-            android:text="Department Of Computer Science And Engineering\n"/>
+            android:text="@string/department_of_computer_science_and_engineering_n"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon"
             android:scaleType="fitXY"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/todo" />
 
 
         <EditText
             android:layout_width="match_parent"
             android:id="@+id/name"
             android:layout_height="wrap_content"
-            android:hint="Enter your name"
+            android:hint="@string/enter_your_name"
             android:layout_marginTop="50dp"
-            android:inputType="textAutoComplete"/>
+            android:inputType="textAutoComplete"
+            android:autofillHints="" />
         <EditText
             android:id="@+id/regd1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your Registration No."
+            android:hint="@string/enter_your_registration_no"
             android:layout_marginTop="30dp"
             android:maxLength="10"
             android:digits="0123456789"
-            android:inputType="textAutoComplete"/>
+            android:inputType="textAutoComplete"
+            android:autofillHints="" />
         <EditText
             android:layout_width="match_parent"
             android:id="@+id/no"
             android:digits="0123456789"
             android:maxLength="10"
             android:layout_height="wrap_content"
-            android:hint="Enter your mobile number"
+            android:hint="@string/enter_your_mobile_number"
             android:layout_marginTop="30dp"
-            android:inputType="textAutoComplete"/>
+            android:inputType="textAutoComplete"
+            android:autofillHints="" />
         <EditText
             android:layout_width="match_parent"
             android:id="@+id/email"
             android:layout_height="wrap_content"
-            android:hint="Enter your email"
+            android:hint="@string/enter_your_email"
             android:layout_marginTop="30dp"
             android:inputType="textEmailAddress"
-            />
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password (8 characters)"
+            android:hint="@string/password_8_characters"
             android:layout_marginTop="30dp"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:autofillHints="" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -77,28 +81,30 @@
             android:layout_width="wrap_content"
             android:id="@+id/login"
             android:layout_height="wrap_content"
-            android:text="Sign in"
+            android:text="@string/sign_in"
             android:textSize="20sp"
             android:textAllCaps="false"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            tools:ignore="ButtonStyle" />
 
 
         <Button
             android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:textSize="20sp"
             android:textAllCaps="false"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            tools:ignore="ButtonStyle" />
         </LinearLayout>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/contact"
-            android:text="Forgot password ?\nContact Us\n"
+            android:text="@string/forgot_password_ncontact_us_n"
             android:layout_gravity="center"
             android:textSize="20sp"
             android:layout_marginTop="10dp"/>
