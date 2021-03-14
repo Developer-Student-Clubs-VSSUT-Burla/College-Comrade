@@ -36,3 +36,17 @@ Future prospects include adding a document scanner , image modifier (format conv
 # Discussion
 
 Hola! Introduce yourself in discussion section. Share your ideas and views. 
+
+# Contributors:
+
+### Credits goes to these people:✨
+
+<table>
+	<tr>
+		<td>
+<a href="https://github.com/Developer-Student-Clubs-VSSUT-Burla/College-Comrade/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Developer-Student-Clubs-VSSUT-Burla/College-Comrade" />
+</a>
+		</td>
+	</tr>
+</table>
