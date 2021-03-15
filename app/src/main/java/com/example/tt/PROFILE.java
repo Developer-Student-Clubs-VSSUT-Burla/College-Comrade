@@ -1,6 +1,7 @@
 package com.example.tt;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,17 +9,24 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class PROFILE extends AppCompatActivity {
 
 
         private Button btncontact;
         private Button btntt;
         private Button btnhol;
+        private FirebaseAuth mAuth;
         private  Button btnfac;
         private  Button btnsb;
         private Button btnln;
+        private Button btnlogout;
+        private SharedPreferences sharedPreferences;
         check c;
-
+        private int mode = 0;
+        private String Filename = "sdfile";
+        private String Data = "b";
 
 
 
@@ -30,10 +38,24 @@ public class PROFILE extends AppCompatActivity {
 
 
 
-
+            mAuth=FirebaseAuth.getInstance();
             btncontact = (Button)findViewById(R.id.contact);
             btnln=(Button)findViewById(R.id.ln);
-
+            btnlogout=findViewById(R.id.logout);
+            btnlogout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                    SharedPreferences pref = getSharedPreferences(Filename, mode);
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putBoolean(Data, false);
+                    editor.commit();
+                    finish();
+                    mAuth.signOut();
+                    startActivity(intent);
+                    finish();
+                }
+            });
             btncontact.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
