@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">College Comrade</string>
+    <string name="login_password_hint">Password</string>
+    <string name="department_of_ncomputer_science_and_engineering">Department of\nComputer Science and Engineering</string>
+    <string name="name">Name</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_up">Sign up</string>
 </resources>

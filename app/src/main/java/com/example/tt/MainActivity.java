@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private EditText email;
     private EditText password;
-    private Button btnSubmit;
+    private TextView btnSubmit;
     private Button btnsignup;
     private FirebaseAuth mAuth;
     private Button btncontact;
@@ -56,13 +57,13 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progressDialog = new ProgressDialog(MainActivity.this);
-        email = (EditText) findViewById(R.id.email);
-        name = (EditText) findViewById(R.id.name);
-        password = (EditText) findViewById(R.id.password);
-        btnSubmit = (Button) findViewById(R.id.login);
+        email = (EditText) findViewById(R.id.editEmail);
+        name = (EditText) findViewById(R.id.editTextName);
+        password = (EditText) findViewById(R.id.editTextPassword);
+        btnSubmit = (TextView) findViewById(R.id.login);
 
-        mobno = (EditText) findViewById(R.id.no);
-        roll= (EditText)findViewById(R.id.regd1);
+        mobno = (EditText) findViewById(R.id.editTextMobile);
+        roll= (EditText)findViewById(R.id.editRegistrationNumber);
         btnsignup = (Button) findViewById(R.id.signup);
         databasestudents = FirebaseDatabase.getInstance().getReference("students");
         mAuth = FirebaseAuth.getInstance();
@@ -173,16 +174,17 @@ public class MainActivity extends AppCompatActivity  {
 
         btncontact = (Button) findViewById(R.id.contact);
 
-        btncontact.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String N = name.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), contact.class);
-
-                intent.putExtra(Student_name, N);
-                startActivity(intent);
-            }
-        });
+//should be on the login page
+//        btncontact.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String N = name.getText().toString();
+//                Intent intent = new Intent(getApplicationContext(), contact.class);
+//
+//                intent.putExtra(Student_name, N);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
