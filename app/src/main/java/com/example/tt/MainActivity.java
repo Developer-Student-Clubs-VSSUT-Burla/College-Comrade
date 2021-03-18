@@ -113,9 +113,16 @@ public class MainActivity extends AppCompatActivity {
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                page1.setVisibility(View.GONE);
-                page2.setVisibility(View.VISIBLE);
-                btnsignup.setEnabled(true);
+
+                if(name.getText().toString().equals("") || roll.getText().toString().equals("") || mobno.getText().toString().equals("")){
+                    Toast.makeText(MainActivity.this, "Fill in all fields", Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+                    page1.setVisibility(View.GONE);
+                    page2.setVisibility(View.VISIBLE);
+                    btnsignup.setEnabled(true);
+                }
             }
         });
 
