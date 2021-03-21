@@ -284,7 +284,7 @@
                 android:gravity="center"
                 android:text="OOP / DEV / DEV LAB /  OOP LAB"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
