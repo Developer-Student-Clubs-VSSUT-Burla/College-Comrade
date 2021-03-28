@@ -1,111 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D9EA59"
+    android:layout_gravity="center"
+    android:background="@color/register_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
     tools:context=".MainActivity">
-    <LinearLayout
-        android:layout_margin="32dp"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:textSize="30sp"
-            android:textAlignment="center"
-            android:text="Department Of Computer Science And Engineering\n"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon"
-            android:scaleType="fitXY"
-            android:layout_gravity="center_horizontal"/>
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:id="@+id/name"
-            android:layout_height="wrap_content"
-            android:hint="Enter your name"
-            android:layout_marginTop="50dp"
-            android:inputType="textAutoComplete"/>
-        <EditText
-            android:id="@+id/regd1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your Registration No."
-            android:layout_marginTop="30dp"
-            android:maxLength="10"
-            android:digits="0123456789"
-            android:inputType="textAutoComplete"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:id="@+id/no"
-            android:digits="0123456789"
-            android:maxLength="10"
-            android:layout_height="wrap_content"
-            android:hint="Enter your mobile number"
-            android:layout_marginTop="30dp"
-            android:inputType="textAutoComplete"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:id="@+id/email"
-            android:layout_height="wrap_content"
-            android:hint="Enter your email"
-            android:layout_marginTop="30dp"
-            android:inputType="textEmailAddress"
-            />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password (8 characters)"
-            android:layout_marginTop="30dp"
-            android:inputType="textPassword"/>
-
+        android:layout_alignParentTop="true">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:id="@+id/login"
-            android:layout_height="wrap_content"
-            android:text="Sign in"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp">
 
+                <TextView
+                    android:id="@+id/textName"
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/imageLogo"
+                    android:layout_centerHorizontal="true"
 
-        <Button
-            android:id="@+id/signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
+                    android:fontFamily="@font/arapey"
+                    android:text="@string/department_of_ncomputer_science_and_engineering"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/imageLogo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:src="@mipmap/ic_launcher" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background_white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    >
+                    <!--                                        <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                                            android:id="@+id/textInputName"-->
+                    <!--                                            style="@style/parent"-->
+                    <!--                                            android:layout_marginTop="@dimen/loginViewsMargin">-->
+                    <EditText
+                        android:id="@+id/editTextName"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:id="@+id/textRegestrationNumber"-->
+                    <!--                        style="@style/parent"-->
+                    <!--                        android:layout_marginTop="@dimen/loginViewsMargin">-->
+                    <EditText
+                        android:id="@+id/editRegistrationNumber"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/registration_number"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:id="@+id/textInputMobile"-->
+                    <!--                        style="@style/parent"-->
+                    <!--                        android:layout_marginTop="@dimen/loginViewsMargin">-->
+                    <EditText
+                        android:id="@+id/editTextMobile"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:id="@+id/textInputEmail"-->
+                    <!--                        style="@style/parent"-->
+                    <!--                        android:layout_marginTop="@dimen/loginViewsMargin">-->
+                    <EditText
+                        android:id="@+id/editEmail"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:id="@+id/textInputPassword"-->
+                    <!--                        style="@style/parent"-->
+                    <!--                        android:layout_marginTop="@dimen/loginViewsMargin">-->
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/login_password_hint"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="40dp"/>
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!--                    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton-->
+                    <Button
+                        android:id="@+id/signup"
+                        style="@style/loginButton"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:text="@string/sign_up" />
+                    <!--                        android:text="SIGN UP"-->
+                    <!--                        android:initialCornerAngle="27dp"-->
+                    <!--                        android:spinning_bar_color="#FFF"-->
+                    <!--                        android:spinning_bar_padding="6dp"-->
+                    <!--                        android:spinning_bar_width="4dp" />-->
+
+                    <TextView
+                        android:id="@+id/login"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+
+                        android:fontFamily="@font/arapey"
+                        android:text="@string/already_have_an_account"
+                        android:textAlignment="center"
+                        android:textColor="#448AFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/contact"
-            android:text="Forgot password ?\nContact Us\n"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"/>
-
-    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
 
 
 
 
-</ScrollView>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#D9EA59"-->
+<!--    tools:context=".MainActivity">-->
+<!--    <LinearLayout-->
+<!--        android:layout_margin="32dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="30sp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:text="Department Of Computer Science And Engineering\n"/>-->
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/icon"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:layout_gravity="center_horizontal"/>-->
+
+
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:id="@+id/name"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter your name"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:inputType="textAutoComplete"/>-->
+<!--        <EditText-->
+<!--            android:id="@+id/regd1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter your Registration No."-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:maxLength="10"-->
+<!--            android:digits="0123456789"-->
+<!--            android:inputType="textAutoComplete"/>-->
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:id="@+id/no"-->
+<!--            android:digits="0123456789"-->
+<!--            android:maxLength="10"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter your mobile number"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:inputType="textAutoComplete"/>-->
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:id="@+id/email"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter your email"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Password (8 characters)"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:inputType="textPassword"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:orientation="horizontal">-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/login"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sign in"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="10dp" />-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/signup"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sign Up"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="10dp"/>-->
+<!--        </LinearLayout>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/contact"-->
+<!--            android:text="Forgot password ?\nContact Us\n"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_marginTop="10dp"/>-->
+
+<!--    </LinearLayout>-->
+
+
+
+
+<!--</ScrollView>-->
