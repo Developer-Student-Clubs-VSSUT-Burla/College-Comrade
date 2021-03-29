@@ -11,6 +11,10 @@
               <match>
                 <AND>
                   <NAME>xmlns:android</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+
+ master
                   <XML_NAMESPACE>^$</XML_NAMESPACE>
                 </AND>
               </match>
@@ -21,6 +25,10 @@
               <match>
                 <AND>
                   <NAME>xmlns:.*</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+
+ master
                   <XML_NAMESPACE>^$</XML_NAMESPACE>
                 </AND>
               </match>
@@ -32,6 +40,9 @@
               <match>
                 <AND>
                   <NAME>.*:id</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+ master
                   <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
                 </AND>
               </match>
@@ -42,6 +53,10 @@
               <match>
                 <AND>
                   <NAME>.*:name</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+
+ master
                   <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
                 </AND>
               </match>
@@ -52,6 +67,10 @@
               <match>
                 <AND>
                   <NAME>name</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+
+ master
                   <XML_NAMESPACE>^$</XML_NAMESPACE>
                 </AND>
               </match>
@@ -62,6 +81,10 @@
               <match>
                 <AND>
                   <NAME>style</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+
+ master
                   <XML_NAMESPACE>^$</XML_NAMESPACE>
                 </AND>
               </match>
@@ -72,6 +95,9 @@
               <match>
                 <AND>
                   <NAME>.*</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+ master
                   <XML_NAMESPACE>^$</XML_NAMESPACE>
                 </AND>
               </match>
@@ -83,6 +109,10 @@
               <match>
                 <AND>
                   <NAME>.*</NAME>
+ anushka530
+                  <XML_ATTRIBUTE />
+
+ master
                   <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
                 </AND>
               </match>
@@ -94,6 +124,10 @@
               <match>
                 <AND>
                   <NAME>.*</NAME>
+ anushka530
+                  <XML_ATTRIBUTE/> 
+                  
+ master
                   <XML_NAMESPACE>.*</XML_NAMESPACE>
                 </AND>
               </match>
