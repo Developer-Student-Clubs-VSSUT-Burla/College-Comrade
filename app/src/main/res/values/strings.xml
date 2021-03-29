@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">College Comrade</string>
+    <string name="about">This app contains all information about the computer science
+    and engineering department for second year students of VSSUT, Burla.
+
+
+    </string>
+    <string name="about1">The information like time-table, syllabus, lecture notes etc enable users to meet the requirements of a student in the department.
+     The information here guides you in the academic areas. This is user friendly.</string>
 </resources>
