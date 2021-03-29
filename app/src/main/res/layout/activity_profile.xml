@@ -1,101 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:orientation="vertical"
-    android:background="#F8BBD0"
-    tools:context=".PROFILE">
-
-    <LinearLayout
+    tools:context=".PROFILE"
+    >
+    <ScrollView
+        android:overScrollMode="never"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Department Of \nComputer Science and Engineering"
-            android:textColor="#000"
-            android:textSize="32sp"
-            android:textAlignment="center"/>
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_marginTop="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Computer Science Department"
+                    android:textSize="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#191970"
+                    android:layout_marginBottom="20dp"
+                    tools:ignore="MissingConstraints" />
 
-            <LinearLayout
-                android:layout_width="200dp"
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:alignmentMode="alignMargins"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <Button
+                android:columnOrderPreserved="false"
+                android:rowCount="5"
+
+                android:columnCount="2">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="20dp"
+                    android:background="@drawable/main_bg"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
                     android:id="@+id/tt"
+
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/main_bg"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/timetable"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TimeTable"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timetable"
-                    android:textSize="20dp"
-                    android:layout_marginTop="22dp"
-                    android:layout_gravity="center" />
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Faculty  "
-                    android:textSize="20dp"
-                    android:id="@+id/fac"
-                    android:layout_marginTop="50dp"
-                    android:layout_gravity="center" />
-
-            </LinearLayout>
-            <LinearLayout
-
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="SYLLABUS  "
+                    app:cardCornerRadius="20dp"
                     android:id="@+id/sb"
-                    android:textSize="20dp"
-                    android:layout_marginTop="22dp" />
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/main_bg"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/syllabus"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Syllabus"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
 
-                <Button
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Holidays"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:background="@drawable/main_bg"
+                    android:id="@+id/fac"
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+
+                        android:background="@drawable/main_bg"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/faculty"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Faculty"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:background="@drawable/main_bg"
+                    app:cardCornerRadius="20dp"
                     android:id="@+id/ho"
-                    android:textSize="20dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_gravity="center" />
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/main_bg"
+                        android:orientation="vertical">
 
-            </LinearLayout>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="93dp"
+                            android:src="@drawable/holiday" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Holiday"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:id="@+id/ln"
+                    android:background="@drawable/main_bg"
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/main_bg"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/notes"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lecture Notes"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:background="@drawable/main_bg"
+                    app:cardCornerRadius="20dp"
+                    android:id="@+id/btncontact"
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/main_bg"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/contact"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact us"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
         </LinearLayout>
-        <Button
-            android:id="@+id/ln"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:textSize="20sp"
-            android:layout_gravity="center"
 
-            android:text="Lecture Notes"/>
-
-        <Button
-            android:id="@+id/contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:textSize="25sp"
-            android:layout_gravity="center"
-            android:text="Contact Us"/>
-
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
