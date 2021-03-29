@@ -101,6 +101,7 @@
             android:text="Forgot password ?\nContact Us\n"
             android:layout_gravity="center"
             android:textSize="20sp"
+            android:textAllCaps="false"
             android:layout_marginTop="10dp"/>
 
     </LinearLayout>
