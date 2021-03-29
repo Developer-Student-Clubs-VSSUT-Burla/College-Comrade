@@ -1,54 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Lecturenotes"
 
-    android:background="#F8BBD0">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="32dp">
+    android:background="#ffffff">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBJECTS"
-        android:textSize="32sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"/>
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#191970"
+        android:layout_marginTop="40dp"
+        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/math"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Mathematics" />
+
 
     <Button
         android:id="@+id/oop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:padding="11dp"
+        android:background="@drawable/main_bg"
+        android:layout_marginTop="120dp"
         android:text="OOPS" />
-
     <Button
         android:id="@+id/dsa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:padding="11dp"
+        android:background="@drawable/main_bg"
+        android:layout_marginTop="220dp"
         android:text="DSA" />
-
     <Button
         android:id="@+id/dec"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:padding="11dp"
+        android:background="@drawable/main_bg"
+        android:layout_marginTop="320dp"
         android:text="DEC" />
-
+    <Button
+        android:id="@+id/math"
+        android:layout_width="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:padding="11dp"
+        android:background="@drawable/main_bg"
+        android:layout_marginTop="420dp"
+        android:text="Mathematics" />
     <Button
         android:id="@+id/eco"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Economics" />
-    </LinearLayout>
-</ScrollView>
+        android:layout_width="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:padding="11dp"
+        android:background="@drawable/main_bg"
+        android:layout_marginTop="520dp"
+        android:text="ECONOMICS" />
+
+</RelativeLayout>

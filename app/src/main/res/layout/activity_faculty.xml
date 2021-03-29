@@ -1,110 +1,686 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8BBD0"
-    tools:context=".faculty">
+    android:background="#000000">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:showDividers="end">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Faculty List"
-            android:textStyle="bold"
-            android:id="@+id/faculty"
-            android:layout_gravity="center"
-            android:textSize="40dp"
-            android:textColor="#000"
-            android:layout_centerHorizontal="true"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/faculty"
-            android:text="HOD CSE"
-            android:textColor="#000"
-            android:textSize="32sp"
-            android:layout_margin="16dp"
-            />
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/f2"
-            android:layout_below="@id/f1"
-            android:text="Dr.Suvasini Panigrahi\nAssociate Professor\nContact-spanigrahi_cse@vssut.ac.in"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:layout_marginStart="16dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/f1"
-            android:layout_below="@id/faculty"
-            android:layout_marginTop="16dp"
-            android:text="SUBJECT TEACHERS"
-            android:textColor="#000"
-            android:layout_marginStart="16dp"
-            android:textSize="30sp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/f3"
-            android:layout_below="@id/f2"
-            android:text="Data Structures and Algorithms\n\nDr.Manas Ranjan Kabat \n Associate Professor\nContact-9861173326\nEmail Id-manas_kabat@yahoo.com"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:layout_margin="16dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/f4"
-            android:layout_below="@id/f3"
-            android:text="OOP , DEC , DEC Lab , OOP Lab \n\nMr.Ranjan Kumar Behera\nAssistant Professor\nContact-8328831105"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:layout_margin="16dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/f5"
-            android:layout_below="@id/f4"
-            android:text="OOP Lab \n\nMr.Shailendra Kumar\nAssociate Professor\nContact-7205371069"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:layout_margin="16dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/f6"
-            android:layout_below="@id/f5"
-            android:text="JP Lab \n\nMs.Alina Dash\nAssistant Professor\nContact-8908153880\nEmail id-Alina.dash1@gmail.com"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:layout_margin="16dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/f7"
-            android:layout_below="@id/f6"
-            android:text=" JP Lab\n\nDr.Satya Prakash Sahoo\nAssistant Professor\nContact-:0663-2430268(O)"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:layout_margin="16dp"
-            />
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient"
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                app:srcCompat="@drawable/person" />
+
+            <TextView
+                android:id="@+id/namehod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DR. SUVASINI PANIGRAHI"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/desighod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Associate Professor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/subhod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="HoD CSE"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/line1hod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+                <TextView
+                    android:id="@+id/conthod"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="CONTACT"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/line2hod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/mailblack" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="spanigrahi_cse@vssut.ac.in"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/gradient"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                app:srcCompat="@drawable/person" />
+
+            <TextView
+                android:id="@+id/namedsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DR. MANAS RANJAN KABAT"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/desigdsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Associate Professor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/subdsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Data Structure and Algorithm"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/line1dsa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+                <TextView
+                    android:id="@+id/contdsa"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="CONTACT"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/line2dsa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mailimgdsa"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/mailblack" />
+
+                <TextView
+                    android:id="@+id/numberdsa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="manas_kabat@yahoo.com"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/phnimgdsa"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/phoneblck" />
+
+                <TextView
+                    android:id="@+id/emaildsa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="9861173326"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/gradient"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                app:srcCompat="@drawable/person" />
+
+            <TextView
+                android:id="@+id/nameoopdev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DR. RANJAN KUMAR BEHERA"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/desigoopdev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Assistant Professor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/suboopdev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="OOP / DEV / DEV LAB /  OOP LAB"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/line1oopdev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+                <TextView
+                    android:id="@+id/contoopdev"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="CONTACT"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/line2oopdev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mailimgoopdev"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/phoneblck" />
+
+                <TextView
+                    android:id="@+id/numberoopdev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="8328831105"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/gradient"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                app:srcCompat="@drawable/person" />
+
+            <TextView
+                android:id="@+id/nameoop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="MR. SHAILENDRA KUMAR"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/desigoop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Associate Professor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/suboop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="OOP LAB"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/line1oop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+                <TextView
+                    android:id="@+id/contoop"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="CONTACT"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/line2oop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mailimgoop"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/phoneblck" />
+
+                <TextView
+                    android:id="@+id/numberoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="7205371069"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/gradient"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                app:srcCompat="@drawable/person" />
+
+            <TextView
+                android:id="@+id/namejp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="MS. ALINA DASH"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/desigjp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Assistant Professor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/subjp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="JP LAB"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/line1jp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+                <TextView
+                    android:id="@+id/contjp"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="CONTACT"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/line2jp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mailimgjp"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/mailblack" />
+
+                <TextView
+                    android:id="@+id/numberjp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Aline.dash1@gmail.com"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/phnimgjp"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/phoneblck" />
+
+                <TextView
+                    android:id="@+id/emailjp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="8908153880"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/gradient"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                app:srcCompat="@drawable/person" />
+
+            <TextView
+                android:id="@+id/namejp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DR. SATYA PRAKASH SAHOO"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/desigjp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Assistant Professor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/subjp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="JP LAB"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/line1jp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+                <TextView
+                    android:id="@+id/contjp2"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="CONTACT"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/line2jp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/phoneblck" />
+
+                <TextView
+                    android:id="@+id/phnimpjp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="0663-2430268(O)"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
-
 
 </ScrollView>
