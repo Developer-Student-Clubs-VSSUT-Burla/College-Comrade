@@ -9,41 +9,83 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".eec"
             android:label="Economics"
-            android:parentActivityName=".Lecturenotes"/>
+            android:parentActivityName=".Lecturenotes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecturenotes"/>
+        </activity>
+
         <activity android:name=".oop"
             android:label="OOPS"
-            android:parentActivityName=".Lecturenotes"/>
+            android:parentActivityName=".Lecturenotes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecturenotes"/>
+         </activity>
         <activity android:name=".dsa"
             android:label="DSA"
-            android:parentActivityName=".Lecturenotes"/>
+            android:parentActivityName=".Lecturenotes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecturenotes"/>
+        </activity>
         <activity android:name=".math"
             android:label="Mathematics"
-            android:parentActivityName=".Lecturenotes"/>
+            android:parentActivityName=".Lecturenotes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecturenotes"/>
+        </activity>
+
         <activity android:name=".Lecturenotes"
             android:label="Subject Notes"
-            android:parentActivityName=".PROFILE"/>
+            android:parentActivityName=".PROFILE">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PROFILE"/>
+        </activity>
         <activity android:name=".timetable"
             android:label="Timetable"
-            android:parentActivityName=".PROFILE"/>
+            android:parentActivityName=".PROFILE">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PROFILE"/>
+        </activity>
         <activity android:name=".syllabus"
             android:label="Syllabus"
-            android:parentActivityName=".PROFILE"/>
+            android:parentActivityName=".PROFILE">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PROFILE"/>
+        </activity>
         <activity android:name=".holiday"
             android:label="Holidays"
-            android:parentActivityName=".PROFILE"/>
+            android:parentActivityName=".PROFILE">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PROFILE"/>
+        </activity>
         <activity android:name=".faculty"
             android:label="Faculty"
-            android:parentActivityName=".PROFILE"/>
+            android:parentActivityName=".PROFILE">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PROFILE"/>
+        </activity>
 
     
 
-        <activity android:name=".PROFILE" />
+        <activity android:name=".PROFILE"
+           />
         <activity android:name=".contact"
             android:label="Contact"
-            android:parentActivityName=".PROFILE"/>
+            android:parentActivityName=".PROFILE">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PROFILE"/>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
