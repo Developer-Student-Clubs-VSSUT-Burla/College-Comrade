@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -94,10 +95,19 @@ public class MainActivity extends AppCompatActivity {
                 String p = password.getText().toString();
 
                 if (TextUtils.isEmpty(e)) {
-                    Toast.makeText(MainActivity.this, "please enter email", Toast.LENGTH_SHORT).show();
+                    email.setError("Please enter email");
+                    email.requestFocus();
+                    return;
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(e).matches()) {
+                    email.setError("Enter a valid email");
+                    email.requestFocus();
+                    return;
                 }
                 if (TextUtils.isEmpty(p)) {
-                    Toast.makeText(MainActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
+                    password.setError("Please enter password");
+                    password.requestFocus();
+                    return;
                 }
 
                 if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
@@ -145,14 +155,19 @@ public class MainActivity extends AppCompatActivity {
                 String p = password.getText().toString();
 
                 if (TextUtils.isEmpty(e)) {
-                    Toast.makeText(MainActivity.this, "please enter email", Toast.LENGTH_SHORT).show();
+                    email.setError("Please enter email");
+                    email.requestFocus();
+                    return;
                 }
                 if (TextUtils.isEmpty(p)) {
-                    Toast.makeText(MainActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
+                    password.setError("Please enter password");
+                    password.requestFocus();
+                    return;
                 }
 
-                if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
+                else if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
                     progressDialog.show();
+                    progressDialog.setMessage("Logging in");
 
                     mAuth.signInWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -164,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                                 check c = new check(getApplicationContext());
                                 c.secondtime();
                                 String N = name.getText().toString();
-                                Toast.makeText(MainActivity.this, "logged in", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), PROFILE.class);
 
                                 intent.putExtra(Student_name, N);
