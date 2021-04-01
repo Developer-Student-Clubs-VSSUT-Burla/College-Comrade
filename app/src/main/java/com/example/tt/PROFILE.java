@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
+import com.example.tt.todo.TodoRV.TodoListActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class PROFILE extends AppCompatActivity {
@@ -126,7 +126,15 @@ public class PROFILE extends AppCompatActivity {
             }
         });
 
+        CardView btnTodoList=(CardView)findViewById(R.id.btnTodoList);
+        btnTodoList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), TodoListActivity.class);
 
+                startActivity(intent);
+            }
+        });
 
 
     }
