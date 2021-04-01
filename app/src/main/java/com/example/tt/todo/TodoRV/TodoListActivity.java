@@ -67,7 +67,7 @@ public class TodoListActivity extends AppCompatActivity {
                     todoAdapter.updateList(todoList);
                 }else{
                     todoList.clear();
-                    todoAdapter.notifyDataSetChanged();
+                    todoAdapter.updateList(todoList);
                 }
             }
         });
@@ -96,8 +96,6 @@ public class TodoListActivity extends AppCompatActivity {
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 //Deleting Task on swipe
                     viewModel.deleteTask(todoAdapter.getItemId(viewHolder.getAdapterPosition()));
-
-
             }
 
             @Override
