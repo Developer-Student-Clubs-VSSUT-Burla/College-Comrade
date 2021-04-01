@@ -1,6 +1,7 @@
 package com.example.tt;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -10,16 +11,22 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class PROFILE extends AppCompatActivity {
 
 
     // private Button btncontact;
+    check c;
+    private int mode=0;
+    private String Filename="sdfile";
+    private String Data="b";
     private Button btntt;
     private Button btnhol;
     private  Button btnfac;
     private  Button btnsb;
     //  private Button btnln;
-    check c;
+
 
 
 
@@ -34,7 +41,6 @@ public class PROFILE extends AppCompatActivity {
 
 
         // Cardview btncontact = (Cardview)findViewById(R.id.btncontact);
-
         CardView card1 = (CardView) findViewById(R.id.btncontact);
         // btnln=(Button)findViewById(R.id.ln);
         CardView card2 = (CardView) findViewById(R.id.ln);
@@ -101,6 +107,22 @@ public class PROFILE extends AppCompatActivity {
                 Intent intent=new Intent(getApplicationContext(),syllabus.class);
 
                 startActivity(intent);
+            }
+        });
+        CardView card7 = (CardView) findViewById(R.id.logout);
+        card7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                SharedPreferences preferences=getSharedPreferences(Filename,mode);
+                SharedPreferences.Editor editor=preferences.edit();
+                editor.putBoolean(Data,false);
+                editor.commit();
+                finish();;
+                FirebaseAuth.getInstance().signOut();
+                startActivity(intent);
+                finish();
             }
         });
 
