@@ -27,6 +27,12 @@ public class PROFILE extends AppCompatActivity {
         private int mode = 0;
         private String Filename = "sdfile";
         private String Data = "b";
+         private Button btntt;
+    private Button btnhol;
+    private  Button btnfac;
+    private  Button btnsb;
+    //  private Button btnln;
+    check c;
 
 
 
@@ -64,58 +70,75 @@ public class PROFILE extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            btnln.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent=new Intent(getApplicationContext(),Lecturenotes.class);
+           CardView card1 = (CardView) findViewById(R.id.btncontact);
+        // btnln=(Button)findViewById(R.id.ln);
+        CardView card2 = (CardView) findViewById(R.id.ln);
 
-                    startActivity(intent);
-                }
-            });
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),contact.class);
+>>>>>>> master
 
-            btntt=(Button)findViewById(R.id.tt);
-            btntt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),Lecturenotes.class);
 
-                    Intent intent=new Intent(getApplicationContext(),timetable.class);
+                startActivity(intent);
+            }
+        });
 
-                    startActivity(intent);
-                }
-            });
+        // btntt=(Button)findViewById(R.id.tt);
+        CardView card3 = (CardView) findViewById(R.id.tt);
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            btnfac=(Button)findViewById(R.id.fac);
-            btnfac.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),timetable.class);
 
-                    Intent intent=new Intent(getApplicationContext(),faculty.class);
+                startActivity(intent);
+            }
+        });
 
-                    startActivity(intent);
-                }
-            });
+        //  btnfac=(Button)findViewById(R.id.fac);
+        CardView card4 = (CardView) findViewById(R.id.fac);
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            btnhol=(Button)findViewById(R.id.ho);
-            btnhol.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),faculty.class);
 
-                    Intent intent=new Intent(getApplicationContext(),holiday.class);
+                startActivity(intent);
+            }
+        });
 
-                    startActivity(intent);
-                }
-            });
+        // btnhol=(Button)findViewById(R.id.ho);
+        CardView card5 = (CardView) findViewById(R.id.ho);
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            btnsb=(Button)findViewById(R.id.sb);
-            btnsb.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),holiday.class);
 
-                    Intent intent=new Intent(getApplicationContext(),syllabus.class);
+                startActivity(intent);
+            }
+        });
 
-                    startActivity(intent);
-                }
-            });
+        //  btnsb=(Button)findViewById(R.id.sb);
+        CardView card6 = (CardView) findViewById(R.id.sb);
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(getApplicationContext(),syllabus.class);
+
+                startActivity(intent);
+            }
+        });
 
 
 
