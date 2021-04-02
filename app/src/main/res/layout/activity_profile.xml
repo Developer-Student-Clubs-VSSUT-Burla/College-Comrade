@@ -233,7 +233,8 @@
                         android:gravity="center"
                         android:padding="16dp"
                         android:background="@drawable/main_bg"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="MissingClass">
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
@@ -257,3 +258,5 @@
 
     </ScrollView>
 </RelativeLayout>
+
+
