@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tt.todo.TodoRV.TodoListActivity;
+
 public class PROFILE extends AppCompatActivity {
 
 
@@ -17,6 +19,7 @@ public class PROFILE extends AppCompatActivity {
         private  Button btnfac;
         private  Button btnsb;
         private Button btnln;
+        private Button btnTodoList;
         check c;
 
 
@@ -95,7 +98,16 @@ public class PROFILE extends AppCompatActivity {
                 }
             });
 
+            btnTodoList=(Button)findViewById(R.id.btnTodoList);
+            btnTodoList.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
+                    Intent intent=new Intent(getApplicationContext(), TodoListActivity.class);
+
+                    startActivity(intent);
+                }
+            });
 
 
         }

@@ -88,6 +88,16 @@
             android:text="Lecture Notes"/>
 
         <Button
+            android:id="@+id/btnTodoList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+
+            android:text="Open TodoList"/>
+
+        <Button
             android:id="@+id/contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
