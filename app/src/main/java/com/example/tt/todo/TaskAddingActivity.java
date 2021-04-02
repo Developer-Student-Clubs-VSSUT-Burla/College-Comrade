@@ -92,7 +92,7 @@ public class TaskAddingActivity extends AppCompatActivity {
             }
         });
 
-        //Setting Spinner 
+        //Setting Spinner
         setUpSpinner();
 
         //adding new item to the spinner
@@ -136,7 +136,7 @@ public class TaskAddingActivity extends AppCompatActivity {
     private void spinnerItemDeleteDialog() {
         spinnerCategory.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) (new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, final int position, long l) {
                 AlertDialog.Builder deleteDialog = new AlertDialog.Builder(TaskAddingActivity.this);
                 deleteDialog.setTitle(labels.get(position) + " Category");
                 deleteDialog.setMessage("Do you want to remove this Category?");
@@ -168,10 +168,10 @@ public class TaskAddingActivity extends AppCompatActivity {
     }
 
     private void addNewLabel() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("LABEL");
         alertDialog.setMessage("Enter New Label");
-        EditText input = new EditText(this);
+        final EditText input = new EditText(this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);

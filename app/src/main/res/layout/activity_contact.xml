@@ -4,81 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8BBD0"
-    tools:context=".contact">
+    android:layout_gravity="center"
+    android:background="#00F8BBD0">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+
+            android:background="@drawable/ic_waves" />
+
         <TextView
-            android:id="@+id/cs"
-            android:layout_margin="32dp"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:text=" College Comrade"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:textColor="#F00000" />
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="80dp"
+            android:text="FOR QUERIES"
+            android:textColor="#9C1B1A1A"
+            android:textSize="24sp" />
+
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About"
-            android:textSize="32sp"
-            android:id="@+id/a"
-            android:layout_below="@id/cs"
-            android:layout_centerHorizontal="true"/>
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="110dp"
+            android:text="CONTACT"
+            android:textColor="#9C1B1A1A"
+            android:textSize="24sp" />
+
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/a"
-            android:id="@+id/about"
-            android:layout_margin="32dp"
-            android:text="This app contains all information about the computer science and engineering department for second year of VSSUT, Burla.\n\nThe information like Time-Table, Syllabus, Lecture Notes, etc enables user to access all the requirements of a student in department. The information here guides you in the academic areas in healthy manner. This is really a handy app"/>
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="150dp"
+            android:gravity="left"
+            android:text="dscvssutburla@gmail.com"
+            android:textColor="#9C1B1A1A"
+            android:textSize="20sp" />
+
+
         <TextView
-            android:id="@+id/dev"
+            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="26sp"
-            android:layout_marginTop="100dp"
-            android:text="Develpoed by-"
-            android:textAlignment="center"
-            android:layout_below="@id/about"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"/>
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="230dp"
+            android:text="ABOUT"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
         <TextView
-            android:id="@+id/rittik"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Developer Students Club (DSC, VSSUT):  \n8895350695     "
-            android:textAlignment="center"
-            android:layout_below="@id/dev"
-            android:textSize="20sp"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="50dp"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            />
-        <!--<TextView
-            android:id="@+id/aitik"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="  Aitik Dandapat:\n   6206014527"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@id/dev"
-            android:textSize="20sp"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="22dp"
-            android:layout_marginTop="50dp" />-->
+            android:layout_below="@id/textView5"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:foregroundGravity="center"
+            android:text="@string/about"
+            android:textColor="#403C3C"
+            android:textSize="19sp" />
+
         <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rittik"
-            android:layout_centerHorizontal="true"
-            android:text="We value your feedback"
-            android:textSize="25sp"
-            android:layout_marginTop="100dp"/>
+            android:layout_below="@id/textView"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:foregroundGravity="center"
+            android:text="@string/about1"
+            android:textColor="#403C3C"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView6"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="100dp"
+            android:gravity="center"
+            android:text="DEVELOPED BY :"
+            android:textColor="#616161"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView8"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="100dp"
+            android:gravity="center"
+            android:text=" DEVELOPER STUDENTS CLUB"
+            android:textColor="#616161"
+            android:textSize="16sp" />
 
     </RelativeLayout>
 

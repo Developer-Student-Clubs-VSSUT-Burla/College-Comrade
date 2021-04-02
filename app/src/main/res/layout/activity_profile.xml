@@ -224,6 +224,75 @@
                     app:cardElevation="6dp"
                     android:background="@drawable/main_bg"
                     app:cardCornerRadius="20dp"
+                    android:id="@+id/btnTodoList"
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/main_bg"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_to_do_list"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open TodoList"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:background="@drawable/main_bg"
+                    app:cardCornerRadius="20dp"
+                    android:id="@+id/logout"
+                    android:layout_margin="12dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/main_bg"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/logout"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Logout"
+                            android:textSize="18dp"
+                            android:textColor="#191970"
+                            android:layout_marginTop="12dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:background="@drawable/main_bg"
+                    app:cardCornerRadius="20dp"
                     android:id="@+id/btncontact"
                     android:layout_margin="12dp"
                     >
@@ -251,9 +320,8 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-
             </GridLayout>
+
         </LinearLayout>
 
     </ScrollView>

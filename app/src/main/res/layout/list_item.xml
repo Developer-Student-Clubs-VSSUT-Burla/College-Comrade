@@ -17,11 +17,12 @@
         android:id="@+id/viewColorTag"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@color/blue_gray_100"
         android:paddingBottom="5dp">
 
@@ -135,6 +136,7 @@
                 android:layout_below="@+id/txtDueDate"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                 android:textColor="@color/black"
                 tools:text="9:00 pm" />
