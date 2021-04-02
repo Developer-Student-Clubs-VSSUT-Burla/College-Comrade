@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -89,10 +90,122 @@
             tools:ignore="ButtonStyle" />
 
 
-        <Button
-            android:id="@+id/signup"
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:text="Department Of Computer Science And Engineering"
+        android:textColor="#343434"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/create_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create an account"
+        android:textColor="#b4b5b7"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_below="@id/main_title"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="@drawable/user"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/create_text"/>
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/circular_shape"
+        android:elevation="1dp"
+        android:hint="Enter Name"
+        android:layout_below="@+id/userImage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"/>
+    <EditText
+        android:id="@+id/regd1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/no_border_circle"
+        android:elevation="1dp"
+        android:hint="Enter Registration Number"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"/>
+    <EditText
+        android:id="@+id/user_Mobile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/no_border_circle"
+        android:elevation="1dp"
+        android:inputType="phone"
+        android:digits="0123456789"
+        android:maxLength="10"
+        android:hint="Enter Mobile Number"
+        android:layout_below="@+id/regd1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"/>
+    <EditText
+        android:id="@+id/user_Email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/no_border_circle"
+        android:elevation="1dp"
+        android:hint="Enter Email "
+        android:layout_below="@+id/user_Mobile"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"/>
+    <EditText
+        android:id="@+id/user_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/no_border_circle"
+        android:elevation="1dp"
+        android:inputType="textPassword"
+        android:hint="Password (8 Characters ) "
+        android:layout_below="@+id/user_Email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"/>
+
+    <Button
+        android:id="@+id/create_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_shape"
+        android:elevation="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="create"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:id="@+id/layout_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_acc"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="@string/sign_up"
             android:textSize="20sp"
             android:textAllCaps="false"
@@ -109,9 +222,19 @@
             android:textSize="20sp"
             android:layout_marginTop="10dp"/>
 
+
     </LinearLayout>
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:textColor="#ABB2B9"
+        android:layout_below="@id/layout_login"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"/>
 
-
-
-
+</RelativeLayout>
 </ScrollView>
