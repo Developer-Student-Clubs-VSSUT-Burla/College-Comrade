@@ -141,23 +141,6 @@
                 android:textColor="@color/black"
                 tools:text="9:00 pm" />
 
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnDelete"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvDueDate"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/blue_gray_100"
-                android:text="DELETE"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                android:textColor="#12005e"
-                android:textStyle="bold"
-                app:cornerRadius="8dp"
-                app:strokeColor="#75a478"
-                app:strokeWidth="1dp" />
         </RelativeLayout>
     </RelativeLayout>
 
