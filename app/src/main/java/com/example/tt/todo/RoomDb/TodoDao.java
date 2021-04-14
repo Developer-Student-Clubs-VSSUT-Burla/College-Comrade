@@ -20,4 +20,9 @@ interface TodoDao {
     LiveData<List<Todo>> getAllTask();
     @Query("update Todo_Table set isFinished=1 where id=:uid")
     void finishTask(long uid);
+    @Query("update Todo_Table set isDone=:d where id=:uid")
+    void taskDone(long uid,int d);
+    @Query("Select * from Todo_Table where id=:uid")
+    Todo getTask(long uid);
 }
+

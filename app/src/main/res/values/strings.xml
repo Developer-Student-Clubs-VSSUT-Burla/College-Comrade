@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">College Comrade</string>
+
+    <string name="department_of_ncomputer_science_and_engineering">Department Of \nComputer Science and Engineering</string>
+    <string name="timetable">Timetable</string>
+    <string name="faculty">Faculty</string>
+
+    <string name="holidays">Holidays</string>
+    <string name="lecture_notes">Lecture Notes</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="syllabus">SYLLABUS</string>
+    <string name="todo">TODO</string>
+    <string name="department_of_computer_science_and_engineering_n">Department Of Computer Science And Engineering\n</string>
+
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_registration_no">Enter your Registration No.</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="password_8_characters">Password (8 characters)</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password_ncontact_us_n">Forgot password ?\nContact Us\n</string>
+    <string name="subjects">SUBJECTS</string>
+    <string name="mathematics">Mathematics</string>
+    <string name="oops">OOPS</string>
+    <string name="dsa">DSA</string>
+    <string name="dec">DEC</string>
+    <string name="economics">Economics</string>
+
+    <string name="faculty_list">Faculty List</string>
+    <string name="hod_cse">HOD CSE</string>
+    <string name="dr_suvasini_panigrahi_nassociate_professor_ncontact_spanigrahi_cse_vssut_ac_in">Dr.Suvasini Panigrahi\nAssociate Professor\nContact-spanigrahi_cse@vssut.ac.in</string>
+    <string name="subject_teachers">SUBJECT TEACHERS</string>
+    <string name="data_structures_and_algorithms_n_ndr_manas_ranjan_kabat_n_associate_professor_ncontact_9861173326_nemail_id_manas_kabat_yahoo_com">Data Structures and Algorithms\n\nDr.Manas Ranjan Kabat \n Associate Professor\nContact-9861173326\nEmail Id-manas_kabat@yahoo.com</string>
+    <string name="oop_dec_dec_lab_oop_lab_n_nmr_ranjan_kumar_behera_nassistant_professor_ncontact_8328831105">OOP , DEC , DEC Lab , OOP Lab \n\nMr.Ranjan Kumar Behera\nAssistant Professor\nContact-8328831105</string>
+    <string name="oop_lab_n_nmr_shailendra_kumar_nassociate_professor_ncontact_7205371069">OOP Lab \n\nMr.Shailendra Kumar\nAssociate Professor\nContact-7205371069</string>
+    <string name="jp_lab_n_nms_alina_dash_nassistant_professor_ncontact_8908153880_nemail_id_alina_dash1_gmail_com">JP Lab \n\nMs.Alina Dash\nAssistant Professor\nContact-8908153880\nEmail id-Alina.dash1@gmail.com</string>
+    <string name="jp_lab_n_ndr_satya_prakash_sahoo_nassistant_professor_ncontact_0663_2430268_o">JP Lab\n\nDr.Satya Prakash Sahoo\nAssistant Professor\nContact-:0663-2430268(O)</string>
+    <string name="college_comrade">College Comrade</string>
+    <string name="about">About</string>
+    <string name="develpoed_by">Develpoed by-</string>
+    <string name="this_app_contains_all_information_about_the_computer_science_and_engineering_department_for_second_year_of_vssut_burla_n_nthe_information_like_time_table_syllabus_lecture_notes_etc_enables_user_to_access_all_the_requirements_of_a_student_in_department_the_information_here_guides_you_in_the_academic_areas_in_healthy_manner_this_is_really_a_handy_app">This app contains all information about the computer science and engineering department for second year of VSSUT, Burla.\n\nThe information like Time-Table, Syllabus, Lecture Notes, etc enables user to access all the requirements of a student in department. The information here guides you in the academic areas in healthy manner. This is really a handy app</string>
+    <string name="developer_students_club_dsc_vssut_n8895350695">Developer Students Club (DSC, VSSUT): \n8895350695</string>
+    <string name="we_value_your_feedback">We value your feedback</string>
+
 </resources>

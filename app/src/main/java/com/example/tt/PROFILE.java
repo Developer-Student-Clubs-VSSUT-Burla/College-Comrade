@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,13 +28,10 @@ public class PROFILE extends AppCompatActivity {
 
 
     public static final String Student_name = "studentname";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
-
         // Cardview btncontact = (Cardview)findViewById(R.id.btncontact);
         CardView card1 = (CardView) findViewById(R.id.btncontact);
         // btnln=(Button)findViewById(R.id.ln);
@@ -43,7 +41,6 @@ public class PROFILE extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), contact.class);
-
                 startActivity(intent);
             }
         });
@@ -51,7 +48,6 @@ public class PROFILE extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Lecturenotes.class);
-
                 startActivity(intent);
             }
         });
@@ -61,9 +57,7 @@ public class PROFILE extends AppCompatActivity {
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(getApplicationContext(), timetable.class);
-
                 startActivity(intent);
             }
         });
@@ -73,9 +67,7 @@ public class PROFILE extends AppCompatActivity {
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(getApplicationContext(), faculty.class);
-
                 startActivity(intent);
             }
         });
@@ -87,7 +79,6 @@ public class PROFILE extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), holiday.class);
-
                 startActivity(intent);
             }
         });
@@ -97,9 +88,7 @@ public class PROFILE extends AppCompatActivity {
         card6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(getApplicationContext(), syllabus.class);
-
                 startActivity(intent);
             }
         });
@@ -107,35 +96,27 @@ public class PROFILE extends AppCompatActivity {
         card7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 SharedPreferences preferences = getSharedPreferences(Filename, mode);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putBoolean(Data, false);
                 editor.commit();
-                //   finish();;
                 FirebaseAuth.getInstance().signOut();
                 startActivity(intent);
                 finish();
             }
         });
-
         CardView card8 = (CardView) findViewById(R.id.btnTodo);
 
         card8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TodoListActivity.class);
-
                 startActivity(intent);
             }
         });
-
-
     }
-
     int backButtonCount = 0;
-
     @Override
     public void onBackPressed() {
         if (backButtonCount >= 1) {

@@ -20,6 +20,8 @@ public class Todo implements Serializable {
     long time;
     @ColumnInfo(name = "isFinished")
     int isFinished = -1;
+    @ColumnInfo(name = "isDone")
+    int isDone=0;
     @PrimaryKey(autoGenerate = true)
     long id =0;
 
@@ -71,6 +73,14 @@ public class Todo implements Serializable {
 
     public void setIsFinished(int isFinished) {
         this.isFinished = isFinished;
+    }
+
+    public int getIsDone() {
+        return isDone;
+    }
+
+    public void setIsDone(int isDone) {
+        this.isDone = isDone;
     }
 
     public long getId() {

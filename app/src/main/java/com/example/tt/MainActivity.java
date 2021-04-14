@@ -7,9 +7,11 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,16 +24,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-
     public static final String Student_name = "studentname";
 
 
     private EditText email;
     private EditText password;
-    private Button btnSubmit;
-    private Button btnsignup;
+    private TextView btnSubmit;
+    private TextView btnsignup;
     private FirebaseAuth mAuth;
-    private Button btncontact;
+    private TextView btncontact;
     private ProgressDialog progressDialog;
     private EditText name;
     private EditText mobno;
@@ -56,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         name = (EditText) findViewById(R.id.name);
         password = (EditText) findViewById(R.id.password);
-        btnSubmit = (Button) findViewById(R.id.login);
-
+        btnSubmit = (TextView) findViewById(R.id.user_Login);
         mobno = (EditText) findViewById(R.id.no);
         roll = (EditText) findViewById(R.id.regd1);
         btnsignup = (Button) findViewById(R.id.signup);
@@ -90,7 +90,10 @@ public class MainActivity extends AppCompatActivity {
 
                 String e = email.getText().toString();
                 String p = password.getText().toString();
-
+                String m = mobno.getText().toString();
+                if (TextUtils.isEmpty(p)) {
+                    password.setError(" enter a  Password");
+                }
                 if (TextUtils.isEmpty(e)) {
                     Toast.makeText(MainActivity.this, "please enter email", Toast.LENGTH_SHORT).show();
                 }
@@ -138,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String e = email.getText().toString();
                 String p = password.getText().toString();
 
@@ -178,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        btncontact = (Button) findViewById(R.id.contact);
+        btncontact = (TextView) findViewById(R.id.contact);
 
         btncontact.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,6 +210,4 @@ public class MainActivity extends AppCompatActivity {
             backButtonCount++;
         }
     }
-
-
 }

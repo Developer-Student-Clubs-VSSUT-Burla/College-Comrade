@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#000080</color>
+    <color name="colorPrimaryDark">#191970</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="gradient1">#73f5c1</color>
+    <color name="gradient2">#04b09e</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -17,7 +19,7 @@
     <color name="red">#D32F2F</color>
     <color name="prussian_blue">#000080</color>
     <color name="deep_blue">#191970</color>
-
+    <color name="tomato_red">#FF6347</color>
 
     <array name="random_color">
         <item name="red_400" type="color">#e84e40</item>

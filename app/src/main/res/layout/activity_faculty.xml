@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,24 +8,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Faculty List"
+            android:text="@string/faculty_list"
             android:textStyle="bold"
             android:id="@+id/faculty"
             android:layout_gravity="center"
-            android:textSize="40dp"
-            android:textColor="#000"
-            android:layout_centerHorizontal="true"/>
+            android:textSize="40sp"
+            android:textColor="#000" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/faculty"
-            android:text="HOD CSE"
+            android:text="@string/hod_cse"
             android:textColor="#000"
             android:textSize="32sp"
             android:layout_margin="16dp"
@@ -35,9 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/f2"
-            android:layout_below="@id/f1"
-            android:text="Dr.Suvasini Panigrahi\nAssociate Professor\nContact-spanigrahi_cse@vssut.ac.in"
-            android:layout_centerHorizontal="true"
+            android:text="@string/dr_suvasini_panigrahi_nassociate_professor_ncontact_spanigrahi_cse_vssut_ac_in"
             android:textSize="20sp"
             android:layout_marginStart="16dp"
             />
@@ -45,9 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/f1"
-            android:layout_below="@id/faculty"
             android:layout_marginTop="16dp"
-            android:text="SUBJECT TEACHERS"
+            android:text="@string/subject_teachers"
             android:textColor="#000"
             android:layout_marginStart="16dp"
             android:textSize="30sp"
@@ -56,9 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/f3"
-            android:layout_below="@id/f2"
-            android:text="Data Structures and Algorithms\n\nDr.Manas Ranjan Kabat \n Associate Professor\nContact-9861173326\nEmail Id-manas_kabat@yahoo.com"
-            android:layout_centerHorizontal="true"
+            android:text="@string/data_structures_and_algorithms_n_ndr_manas_ranjan_kabat_n_associate_professor_ncontact_9861173326_nemail_id_manas_kabat_yahoo_com"
             android:textSize="20sp"
             android:layout_margin="16dp"
             />
@@ -66,9 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/f4"
-            android:layout_below="@id/f3"
-            android:text="OOP , DEC , DEC Lab , OOP Lab \n\nMr.Ranjan Kumar Behera\nAssistant Professor\nContact-8328831105"
-            android:layout_centerHorizontal="true"
+            android:text="@string/oop_dec_dec_lab_oop_lab_n_nmr_ranjan_kumar_behera_nassistant_professor_ncontact_8328831105"
             android:textSize="20sp"
             android:layout_margin="16dp"
             />
@@ -76,9 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/f5"
-            android:layout_below="@id/f4"
-            android:text="OOP Lab \n\nMr.Shailendra Kumar\nAssociate Professor\nContact-7205371069"
-            android:layout_centerHorizontal="true"
+            android:text="@string/oop_lab_n_nmr_shailendra_kumar_nassociate_professor_ncontact_7205371069"
             android:textSize="20sp"
             android:layout_margin="16dp"
             />
@@ -86,9 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/f6"
-            android:layout_below="@id/f5"
-            android:text="JP Lab \n\nMs.Alina Dash\nAssistant Professor\nContact-8908153880\nEmail id-Alina.dash1@gmail.com"
-            android:layout_centerHorizontal="true"
+            android:text="@string/jp_lab_n_nms_alina_dash_nassistant_professor_ncontact_8908153880_nemail_id_alina_dash1_gmail_com"
             android:textSize="20sp"
             android:layout_margin="16dp"
             />
@@ -96,9 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/f7"
-            android:layout_below="@id/f6"
-            android:text=" JP Lab\n\nDr.Satya Prakash Sahoo\nAssistant Professor\nContact-:0663-2430268(O)"
-            android:layout_centerHorizontal="true"
+            android:text="@string/jp_lab_n_ndr_satya_prakash_sahoo_nassistant_professor_ncontact_0663_2430268_o"
             android:textSize="20sp"
             android:layout_margin="16dp"
             />

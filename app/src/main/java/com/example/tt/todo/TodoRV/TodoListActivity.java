@@ -72,14 +72,14 @@ public class TodoListActivity extends AppCompatActivity {
             }
         });
         //Opening TaskAddingActivity
-         fbtnTodoTaskAdd=(FloatingActionButton)findViewById(R.id.fbtnTodoTaskAdd);
-         fbtnTodoTaskAdd.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 Intent intent= new Intent(getApplicationContext(), TaskAddingActivity.class);
-                 startActivity(intent);
-             }
-         });
+        fbtnTodoTaskAdd=(FloatingActionButton)findViewById(R.id.fbtnTodoTaskAdd);
+        fbtnTodoTaskAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(), TaskAddingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void initSwipe() {
         SimpleCallback simpleItemTouchCallback=new SimpleCallback(

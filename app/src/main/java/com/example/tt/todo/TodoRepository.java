@@ -17,9 +17,13 @@ public class TodoRepository {
         mAllTodos = mTodoDao.getAllTask();
     }
 
-   // getting all task of the table
+    // getting all task of the table
     LiveData<List<Todo>> getAllTask() {
         return mAllTodos;
+    }
+
+    Todo getTask(long uid){
+        return mTodoDao.getTask(uid);
     }
 
     // inserting a todo_task into the Todo_Table of the database on a non-UI thread.
@@ -40,6 +44,13 @@ public class TodoRepository {
     void finishTask(long uid) {
         TodoDatabase.databaseWriteExecutor.execute(() -> {
             mTodoDao.finishTask(uid);
+        });
+    }
+
+
+    void taskDone(long uid,int d) {
+        TodoDatabase.databaseWriteExecutor.execute(() -> {
+            mTodoDao.taskDone(uid,d);
         });
     }
 

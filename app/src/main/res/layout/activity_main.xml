@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,7 +28,6 @@
             android:scaleType="fitXY"
             android:src="@drawable/icon" />
 
-
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
@@ -35,7 +35,6 @@
             android:layout_marginTop="50dp"
             android:hint="Enter your name"
             android:inputType="textAutoComplete" />
-
         <EditText
             android:id="@+id/regd1"
             android:layout_width="match_parent"
@@ -45,7 +44,6 @@
             android:hint="Enter your Registration No."
             android:inputType="textAutoComplete"
             android:maxLength="10" />
-
         <EditText
             android:id="@+id/no"
             android:layout_width="match_parent"
@@ -88,7 +86,6 @@
                 android:textAllCaps="false"
                 android:textSize="20sp" />
 
-
             <Button
                 android:id="@+id/signup"
                 android:layout_width="wrap_content"
@@ -108,8 +105,5 @@
             android:layout_marginTop="10dp"
             android:text="Forgot password ?\nContact Us\n"
             android:textSize="20sp" />
-
     </LinearLayout>
-
-
 </ScrollView>

@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -52,7 +51,6 @@
                     android:layout_margin="12dp"
                     android:background="@drawable/main_bg"
                     app:cardCornerRadius="20dp"
-
                     app:cardElevation="6dp">
 
                     <LinearLayout
@@ -86,7 +84,6 @@
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-
                     android:layout_margin="12dp"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="6dp">
@@ -103,7 +100,6 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:src="@drawable/syllabus" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
