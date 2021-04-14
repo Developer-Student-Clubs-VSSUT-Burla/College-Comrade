@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         name = (EditText) findViewById(R.id.name);
         password = (EditText) findViewById(R.id.password);
-        btnSubmit = (TextView) findViewById(R.id.user_Login);
+        btnSubmit = (TextView) findViewById(R.id.login);
         mobno = (EditText) findViewById(R.id.no);
         roll = (EditText) findViewById(R.id.regd1);
         btnsignup = (Button) findViewById(R.id.signup);
