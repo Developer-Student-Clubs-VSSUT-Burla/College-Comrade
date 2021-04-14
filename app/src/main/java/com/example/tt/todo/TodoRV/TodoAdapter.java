@@ -73,6 +73,10 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
         allNotes.addAll(newList);
         notifyDataSetChanged();
     }
+    @Override
+    public long getItemId(int position) {
+        return allNotes.get(position).getId();
+    }
 
     class TodoViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;

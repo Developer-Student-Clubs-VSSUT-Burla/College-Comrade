@@ -15,6 +15,8 @@
     <color name="litherGray">#a1a1a1</color>
     <color name="green">#388E3C</color>
     <color name="red">#D32F2F</color>
+    <color name="prussian_blue">#000080</color>
+    <color name="deep_blue">#191970</color>
 
 
     <array name="random_color">
