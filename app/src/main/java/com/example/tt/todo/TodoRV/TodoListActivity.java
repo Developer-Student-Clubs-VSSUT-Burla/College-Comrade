@@ -81,7 +81,6 @@ public class TodoListActivity extends AppCompatActivity {
             }
         });
     }
-
     private void initSwipe() {
         SimpleCallback simpleItemTouchCallback=new SimpleCallback(
                 0,
@@ -95,7 +94,7 @@ public class TodoListActivity extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 //Deleting Task on swipe
-                    viewModel.deleteTask(todoAdapter.getItemId(viewHolder.getAdapterPosition()));
+                viewModel.deleteTask(todoAdapter.getItemId(viewHolder.getBindingAdapterPosition()));
             }
 
             @Override
@@ -156,5 +155,4 @@ public class TodoListActivity extends AppCompatActivity {
         ItemTouchHelper itemTouchHelper=new ItemTouchHelper(simpleItemTouchCallback);
         itemTouchHelper.attachToRecyclerView(rvTodo);
     }
-
 }

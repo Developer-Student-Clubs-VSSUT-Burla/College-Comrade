@@ -31,12 +31,6 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
     public TodoAdapter(Context context) {
         this.context = context;
     }
-
-    @Override
-    public long getItemId(int position) {
-        return allNotes.get(position).getId();
-    }
-
     @NonNull
     @Override
     public TodoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -84,6 +78,10 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
         allNotes.addAll(newList);
         notifyDataSetChanged();
     }
+    @Override
+    public long getItemId(int position) {
+        return allNotes.get(position).getId();
+    }
 
     class TodoViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
@@ -105,4 +103,3 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
         }
     }
 }
-

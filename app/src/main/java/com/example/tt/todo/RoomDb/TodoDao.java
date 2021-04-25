@@ -25,3 +25,4 @@ interface TodoDao {
     @Query("Select * from Todo_Table where id=:uid")
     Todo getTask(long uid);
 }
+

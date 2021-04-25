@@ -8,8 +8,7 @@ import androidx.room.RoomDatabase;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-@Database(entities = {Todo.class},version = 2,exportSchema = false)
+@Database(entities = {Todo.class},version = 4,exportSchema = false)
 public abstract class TodoDatabase extends RoomDatabase {
 
     public abstract TodoDao todoDao();

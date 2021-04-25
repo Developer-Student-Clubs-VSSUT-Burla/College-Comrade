@@ -13,10 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,11 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class MainActivity extends AppCompatActivity {
-
     public static final String Student_name = "studentname";
 
 
@@ -60,14 +54,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progressDialog = new ProgressDialog(MainActivity.this);
-        email = (EditText) findViewById(R.id.user_Email);
+        email = (EditText) findViewById(R.id.email);
         name = (EditText) findViewById(R.id.name);
-        password = (EditText) findViewById(R.id.user_password);
-        btnSubmit = (TextView) findViewById(R.id.user_Login);
-
-        mobno = (EditText) findViewById(R.id.user_Mobile);
+        password = (EditText) findViewById(R.id.password);
+        btnSubmit = (TextView) findViewById(R.id.login);
+        mobno = (EditText) findViewById(R.id.no);
         roll = (EditText) findViewById(R.id.regd1);
-        btnsignup = (Button) findViewById(R.id.create_acc);
+        btnsignup = (Button) findViewById(R.id.signup);
         databasestudents = FirebaseDatabase.getInstance().getReference("students");
         mAuth = FirebaseAuth.getInstance();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -101,49 +94,45 @@ public class MainActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(p)) {
                     password.setError(" enter a  Password");
                 }
-
-                if (TextUtils.isEmpty(m)) {
-                    mobno.setError("Enter mobile no");
+                if (TextUtils.isEmpty(e)) {
+                    Toast.makeText(MainActivity.this, "please enter email", Toast.LENGTH_SHORT).show();
+                }
+                if (TextUtils.isEmpty(p)) {
+                    Toast.makeText(MainActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
                 }
 
-                if (e != null) {
-                    String regex = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
-                    Pattern pattern = Pattern.compile(regex);
-                    Matcher matcher = pattern.matcher(e);
-                    if (!matcher.matches()) {
-                        email.setError("Please enter a valid email");
-                    } else if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p) && !TextUtils.isEmpty(m)) {
-                        progressDialog.show();
-                        progressDialog.setMessage("Registering user");
+                if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
+                    progressDialog.show();
+                    progressDialog.setMessage("Registering user");
 
-                        mAuth.createUserWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (!task.isSuccessful()) {
-                                    String mssg = task.getException().getMessage();
-                                    Toast.makeText(MainActivity.this, mssg, Toast.LENGTH_SHORT).show();
-                                    progressDialog.dismiss();
-                                } else {
-                                    String N = name.getText().toString();
-                                    String E = email.getText().toString();
-                                    String M = mobno.getText().toString();
-                                    String R = roll.getText().toString();
-                                    String id = databasestudents.push().getKey();
+                    mAuth.createUserWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!task.isSuccessful()) {
+                                String mssg = task.getException().getMessage();
+                                Toast.makeText(MainActivity.this, mssg, Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
+                            } else {
+                                String N = name.getText().toString();
+                                String E = email.getText().toString();
+                                String M = mobno.getText().toString();
+                                String R = roll.getText().toString();
+                                String id = databasestudents.push().getKey();
+
+                                studentdatabase studentdatabase = new studentdatabase(id, N, R, E, M);
+
+                                databasestudents.child(id).setValue(studentdatabase);
 
 
-                                    studentdatabase studentdatabase = new studentdatabase(id, N, R, E, M);
-                                    databasestudents.child(id).setValue(studentdatabase);
+                                progressDialog.setMessage("Registering user");
+                                Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
 
-                                    progressDialog.setMessage("Registering user");
-                                    Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                                    progressDialog.dismiss();
-
-
-                                }
 
                             }
-                        });
-                    }
+
+                        }
+                    });
                 }
             }
         });
@@ -152,8 +141,41 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                startActivity(intent);
+                String e = email.getText().toString();
+                String p = password.getText().toString();
+
+                if (TextUtils.isEmpty(e)) {
+                    Toast.makeText(MainActivity.this, "please enter email", Toast.LENGTH_SHORT).show();
+                }
+                if (TextUtils.isEmpty(p)) {
+                    Toast.makeText(MainActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
+                }
+
+                if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
+                    progressDialog.show();
+
+                    mAuth.signInWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this, "Invalid email or password/Register first", Toast.LENGTH_SHORT).show();
+                            } else {
+
+                                check c = new check(getApplicationContext());
+                                c.secondtime();
+                                String N = name.getText().toString();
+                                Toast.makeText(MainActivity.this, "logged in", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), PROFILE.class);
+
+                                intent.putExtra(Student_name, N);
+                                startActivity(intent);
+
+
+                            }
+                            progressDialog.dismiss();
+                        }
+                    });
+                }
             }
         });
 
@@ -188,6 +210,4 @@ public class MainActivity extends AppCompatActivity {
             backButtonCount++;
         }
     }
-
-
 }
