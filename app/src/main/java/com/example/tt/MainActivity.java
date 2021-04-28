@@ -8,15 +8,15 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -35,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
     private Button btnsignup;
     private Button next_button;
     private Button back_button;
+    private TextView btnSubmit;
+    private TextView btnsignup;
     private FirebaseAuth mAuth;
-    private Button btncontact;
+    private TextView btncontact;
     private ProgressDialog progressDialog;
     private EditText name;
     private EditText mobno;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout page1;
     private LinearLayout page2;
+
 
     DatabaseReference databasestudents;
 
@@ -81,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
         databasestudents = FirebaseDatabase.getInstance().getReference("students");
         mAuth = FirebaseAuth.getInstance();
 
+        databasestudents = FirebaseDatabase.getInstance().getReference("students");
+        mAuth = FirebaseAuth.getInstance();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel =
                     new NotificationChannel("MyNotifications", "MyNotifications", NotificationManager.IMPORTANCE_DEFAULT);
@@ -132,9 +137,20 @@ public class MainActivity extends AppCompatActivity {
 
                 String e = email.getText().toString();
                 String p = password.getText().toString();
+                String m = mobno.getText().toString();
+                if (TextUtils.isEmpty(p)) {
+                    password.setError(" enter a  Password");
+                }
+                if (TextUtils.isEmpty(e)) {
+                    Toast.makeText(MainActivity.this, "please enter email", Toast.LENGTH_SHORT).show();
+                }
+                if (TextUtils.isEmpty(p)) {
+                    Toast.makeText(MainActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
+                }
 
-                progressDialog.setMessage("Registering user");
-                progressDialog.show();
+                if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
+                    progressDialog.show();
+                    progressDialog.setMessage("Registering user");
 
                 mAuth.createUserWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -152,18 +168,19 @@ public class MainActivity extends AppCompatActivity {
 
                             studentdatabase studentdatabase = new studentdatabase(id, N, R, E, M);
 
-                            databasestudents.child(id).setValue(studentdatabase);
+                                databasestudents.child(id).setValue(studentdatabase);
 
 
-                            progressDialog.setMessage("Registering user");
-                            Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                            progressDialog.dismiss();
+                                progressDialog.setMessage("Registering user");
+                                Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
 
+
+                            }
 
                         }
-
-                    }
-                });
+                    });
+                }
             }
         });
 
@@ -171,7 +188,6 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String e = email.getText().toString();
                 String p = password.getText().toString();
 
@@ -181,34 +197,42 @@ public class MainActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(p)) {
                     Toast.makeText(MainActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
                 }
-                progressDialog.show();
 
-                mAuth.signInWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-                        if (!task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "Invalid email or password/Register first", Toast.LENGTH_SHORT).show();
-                        } else {
+                if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
+                    progressDialog.show();
 
                             check c = new check(getApplicationContext());
                             c.secondtime();
                             String N = name.getText().toString();
                             Toast.makeText(MainActivity.this, "logged in", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), PROFILE.class);
+                    mAuth.signInWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this, "Invalid email or password/Register first", Toast.LENGTH_SHORT).show();
+                            } else {
 
-                            intent.putExtra(Student_name, N);
-                            startActivity(intent);
+                                check c = new check(getApplicationContext());
+                                c.secondtime();
+                                String N = name.getText().toString();
+                                Toast.makeText(MainActivity.this, "logged in", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), PROFILE.class);
+
+                                intent.putExtra(Student_name, N);
+                                startActivity(intent);
 
 
+                            }
+                            progressDialog.dismiss();
                         }
-                    }
-                });
+                    });
+                }
             }
         });
 
 
-        btncontact = (Button) findViewById(R.id.contact);
+        btncontact = (TextView) findViewById(R.id.contact);
 
         btncontact.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -238,6 +262,5 @@ public class MainActivity extends AppCompatActivity {
             backButtonCount++;
         }
     }
-
 
 }

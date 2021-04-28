@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -53,14 +54,35 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="32dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Department Of Computer Science And Engineering\n"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon" />
+
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="name"
-            android:hint="Name"
-            android:inputType="textAutoComplete" />
 
+            android:layout_marginTop="50dp"
+            android:hint="Enter your name"
+            android:inputType="textAutoComplete" />
         <EditText
             android:id="@+id/regd1"
             android:layout_width="match_parent"
@@ -109,6 +131,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
+            android:layout_marginTop="30dp"
+            android:digits="0123456789"
+            android:hint="Enter your Registration No."
+            android:inputType="textAutoComplete"
+            android:maxLength="10" />
+        <EditText
+            android:id="@+id/no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:digits="0123456789"
+            android:hint="Enter your mobile number"
+            android:inputType="textAutoComplete"
+            android:maxLength="10" />
 
         <EditText
             android:id="@+id/email"
@@ -117,6 +153,9 @@
             android:autofillHints="email"
             android:hint="Email"
             android:inputType="textEmailAddress"/>
+            android:layout_marginTop="30dp"
+            android:hint="Enter your email"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/password"
