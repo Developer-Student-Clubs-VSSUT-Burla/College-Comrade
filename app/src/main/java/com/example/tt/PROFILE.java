@@ -115,6 +115,15 @@ public class PROFILE extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        CardView card9 = (CardView) findViewById(R.id.btnPdfReader);
+
+        card8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TodoListActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     int backButtonCount = 0;
     @Override

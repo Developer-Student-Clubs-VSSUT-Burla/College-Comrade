@@ -39,7 +39,6 @@
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
                 android:columnOrderPreserved="false"
-
                 android:rowCount="5">
 
                 <androidx.cardview.widget.CardView
@@ -332,6 +331,42 @@
                 </androidx.cardview.widget.CardView>
 
             </GridLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnPdfReader"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:layout_gravity="center"
+                android:background="@drawable/main_bg"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/pdf_file" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Read Pdf"
+                        android:textColor="#191970"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
     </ScrollView>
