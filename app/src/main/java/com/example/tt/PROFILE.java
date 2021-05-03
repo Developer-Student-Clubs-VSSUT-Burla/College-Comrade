@@ -117,10 +117,10 @@ public class PROFILE extends AppCompatActivity {
         });
         CardView card9 = (CardView) findViewById(R.id.btnPdfReader);
 
-        card8.setOnClickListener(new View.OnClickListener() {
+        card9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TodoListActivity.class);
+                Intent intent = new Intent(getApplicationContext(), PdfReaderActivity.class);
                 startActivity(intent);
             }
         });
