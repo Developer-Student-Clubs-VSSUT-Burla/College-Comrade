@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.example.tt.adapter.PdfListAdapter;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 
@@ -21,7 +22,7 @@ public class PdfViewerActivity extends AppCompatActivity {
         pdfView=findViewById(R.id.viewPdf);
         Intent intent = getIntent();
         int position = intent.getIntExtra("position",-1);
-        pdf= PdfReaderActivity.pdfFileList.get(position);
+        pdf= PdfListAdapter.list.get(position);
 
         readPdf();
     }
