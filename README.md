@@ -27,7 +27,7 @@
 ---
 ## Features
 
-- It enables users to upload timetable(image/document) which will be converted into Attendance Manager. 
+- It enables users to upload timetables(image/document) which will be converted into Attendance Manager. 
 
 - To-do list.
 
@@ -60,7 +60,7 @@ Future prospects include adding a document scanner , image modifier (format conv
 
 ## Note
 - Issues will be assigned on a first come, first serve basis. You just have to comment on the issue, asking to be assigned( Optional: Explain briefly about your implementation) .
-- It will be highly appreciated if you add screenshot/video of the changes while making PR.
+- It will be highly appreciated if you add a screenshot/video of the changes while making PR.
 
 ## Discussion
 
@@ -79,3 +79,5 @@ Hola! Introduce yourself in the discussion section. Your views and ideas are hig
 		</td>
 	</tr>
 </table>
+
+
