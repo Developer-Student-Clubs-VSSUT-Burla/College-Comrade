@@ -1,5 +1,6 @@
 package com.example.tt;
 
+import android.app.ActionBar;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -24,11 +26,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String Student_name = "studentname";
 
+    public static final String Student_name = "studentname";
 
     private EditText email;
     private EditText password;
+    private Button btnSubmit;
+    private Button btnsignup;
+    private Button next_button;
+    private Button back_button;
     private TextView btnSubmit;
     private TextView btnsignup;
     private FirebaseAuth mAuth;
@@ -38,8 +44,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText mobno;
     private EditText roll;
 
-    DatabaseReference databasestudents;
+    private LinearLayout page1;
+    private LinearLayout page2;
 
+
+    DatabaseReference databasestudents;
 
     @Override
     protected void onStart() {
@@ -53,14 +62,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().hide();
+
         progressDialog = new ProgressDialog(MainActivity.this);
-        email = (EditText) findViewById(R.id.email);
-        name = (EditText) findViewById(R.id.name);
-        password = (EditText) findViewById(R.id.password);
-        btnSubmit = (TextView) findViewById(R.id.login);
-        mobno = (EditText) findViewById(R.id.no);
-        roll = (EditText) findViewById(R.id.regd1);
-        btnsignup = (Button) findViewById(R.id.signup);
+        email = findViewById(R.id.email);
+        name = findViewById(R.id.name);
+        password = findViewById(R.id.password);
+        btnSubmit = findViewById(R.id.login);
+
+        mobno = findViewById(R.id.no);
+        roll = findViewById(R.id.regd1);
+        btnsignup = findViewById(R.id.signup);
+
+        next_button = findViewById(R.id.next);
+        back_button = findViewById(R.id.back);
+
+        page1 = findViewById(R.id.page1);
+        page2 = findViewById(R.id.page2);
+
+        databasestudents = FirebaseDatabase.getInstance().getReference("students");
+        mAuth = FirebaseAuth.getInstance();
+
         databasestudents = FirebaseDatabase.getInstance().getReference("students");
         mAuth = FirebaseAuth.getInstance();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -69,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
+
         FirebaseMessaging.getInstance().subscribeToTopic("general")
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -82,11 +106,34 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                page1.setVisibility(View.VISIBLE);
+                page2.setVisibility(View.GONE);
+                btnsignup.setEnabled(false);
+            }
+        });
+
+        next_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(name.getText().toString().equals("") || roll.getText().toString().equals("") || mobno.getText().toString().equals("")){
+                    Toast.makeText(MainActivity.this, "Fill in all fields", Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+                    page1.setVisibility(View.GONE);
+                    page2.setVisibility(View.VISIBLE);
+                    btnsignup.setEnabled(true);
+                }
+            }
+        });
 
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 String e = email.getText().toString();
                 String p = password.getText().toString();
@@ -105,21 +152,21 @@ public class MainActivity extends AppCompatActivity {
                     progressDialog.show();
                     progressDialog.setMessage("Registering user");
 
-                    mAuth.createUserWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (!task.isSuccessful()) {
-                                String mssg = task.getException().getMessage();
-                                Toast.makeText(MainActivity.this, mssg, Toast.LENGTH_SHORT).show();
-                                progressDialog.dismiss();
-                            } else {
-                                String N = name.getText().toString();
-                                String E = email.getText().toString();
-                                String M = mobno.getText().toString();
-                                String R = roll.getText().toString();
-                                String id = databasestudents.push().getKey();
+                mAuth.createUserWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (!task.isSuccessful()) {
+                            String mssg = task.getException().getMessage();
+                            Toast.makeText(MainActivity.this, mssg, Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                        } else {
+                            String N = name.getText().toString();
+                            String E = email.getText().toString();
+                            String M = mobno.getText().toString();
+                            String R = roll.getText().toString();
+                            String id = databasestudents.push().getKey();
 
-                                studentdatabase studentdatabase = new studentdatabase(id, N, R, E, M);
+                            studentdatabase studentdatabase = new studentdatabase(id, N, R, E, M);
 
                                 databasestudents.child(id).setValue(studentdatabase);
 
@@ -154,6 +201,11 @@ public class MainActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(e) && !TextUtils.isEmpty(p)) {
                     progressDialog.show();
 
+                            check c = new check(getApplicationContext());
+                            c.secondtime();
+                            String N = name.getText().toString();
+                            Toast.makeText(MainActivity.this, "logged in", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), PROFILE.class);
                     mAuth.signInWithEmailAndPassword(e, p).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -210,4 +262,5 @@ public class MainActivity extends AppCompatActivity {
             backButtonCount++;
         }
     }
+
 }
