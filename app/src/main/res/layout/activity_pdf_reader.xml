@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/itemSearch"
+        android:layout_width="match_parent"
+        android:background="@drawable/search_view"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Your Pdf..."/>
+
+    <com.skydoves.androidveil.VeilRecyclerFrameView
+        android:id="@+id/rvPdfList"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/itemSearch"
+        android:layout_height="match_parent"
+        app:veilFrame_layout="@layout/list_item"
+        app:veilFrame_veiled="true"
+        app:veilFrame_shimmerEnable="true"
+        app:veilFrame_baseColor="#e8eaf6"
+        app:veilFrame_highlightColor="#ffffff"
+        app:veilFrame_baseAlpha="0.6"
+        app:veilFrame_highlightAlpha="1.0"
+        app:veilFrame_radius="8dp" />
+</RelativeLayout>
